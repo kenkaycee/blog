@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="post-entry">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }} </p>
+</div>
+    <hr>
+    <p>
+        <a class="btn btn-warning" href="{% url 'post_edit' post.pk %}" role="button">Update Post</a>
+        <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}" role="button">Delete Post</a>
+    </p>
+
+{% endblock content %}
